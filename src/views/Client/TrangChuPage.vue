@@ -38,7 +38,7 @@ watchEffect(() => {
                         <div class="carousel-caption relative">
                             <span>All New Phones </span>
                             <h1>up to 25% Flat Sale</h1>
-                            <a class="buynow" href="/danh-muc-san-pham">Buy Now</a>
+                            <RouterLink class="buynow" to="/danh-muc-san-pham">Buy Now</RouterLink>
                             <ul class="social_icon">
                                 <li>
                                     <a href="https://www.facebook.com" target="_blank"
@@ -63,7 +63,7 @@ watchEffect(() => {
                         <div class="carousel-caption relative">
                             <span>All New Phones </span>
                             <h1>up to 25% Flat Sale</h1>
-                            <a class="buynow" href="/danh-muc-san-pham">Buy Now</a>
+                            <RouterLink class="buynow" to="/danh-muc-san-pham">Buy Now</RouterLink>
                             <ul class="social_icon">
                                 <li>
                                     <a href="https://www.facebook.com" target="_blank"
