@@ -1,20 +1,19 @@
 import { defineStore } from 'pinia'
 import axios from 'axios'
 import { ref } from 'vue'
-import { useRoute } from 'vue-router'
-const route = useRoute()
 
 export const useDanhGiaStore = defineStore('DanhGia', {
     state: () => ({
         DanhGia: ref([]),
     }),
     actions: {
-        async getDanhGia() {
+        async getDanhGia(PK_MaDienThoai) {
             try {
-                const FK_MaDienThoai = route.params.PK_MaDienThoai
-                const URL = process.env.VUE_APP_origin + `/api/v1/danhgia/${FK_MaDienThoai}`
+                const URL = process.env.VUE_APP_origin + `/api/v1/danhgia/${PK_MaDienThoai}`
+                console.log(URL)
                 const result = await axios.get(URL)
                 this.DanhGia = await result.data
+                console.log(this.DanhGia)
             } catch (error) {
                 console.log(error)
             }

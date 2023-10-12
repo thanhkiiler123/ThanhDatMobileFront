@@ -14,7 +14,7 @@ const DienThoaiStore = useDienThoaiStore()
 const route = useRoute()
 DienThoaiStore.getDienThoai()
 DienThoaiStore.getSingleDienThoai(route.params.PK_MaDienThoai)
-DanhGiaStore.getDanhGia()
+DanhGiaStore.getDanhGia(route.params.PK_MaDienThoai)
 
 const SoLuong = ref(1)
 const NoiDungDanhGia = ref('')
